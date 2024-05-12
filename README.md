@@ -11,7 +11,7 @@ from natural language requests for given data.
 Chat2Plot does not generate executable code or SQL from the LLM, 
 so you can safely generate visualizations.
 
-demo: https://chat2plot-sample.streamlit.app/
+demo: https://chat2viz.streamlit.app/
 
 ![sample](sample.png)
 
