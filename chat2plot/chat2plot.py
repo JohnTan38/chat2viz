@@ -408,7 +408,7 @@ def parse_json(content: str) -> tuple[str, dict[str, Any]]:
 
 def _get_or_default_chat_model(chat: BaseChatModel | None) -> BaseChatModel:
     if chat is None:
-        return ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-0613")  # type: ignore
+        return ChatOpenAI(temperature=0, model_name="gpt-4")  # type: ignore
     return chat
 
 
@@ -417,5 +417,5 @@ def _has_function_call_capability(chat: BaseChatModel) -> bool:
         return False
     return any(
         chat.model_name.startswith(prefix)
-        for prefix in ["gpt-4-0613", "gpt-3.5-turbo-0613"]
+        for prefix in ["gpt-4-turbo", "gpt-4", "gpt-3.5-turbo-0613"]
     )
